@@ -5,6 +5,8 @@ import {Rating} from "./Components/Rating/Rating";
 
 import {Accordion} from "./Components/Accordion/Accordion";
 import {OnOff} from "./Components/OnOff/OnOff";
+import {UnControlledAccordion} from "./Components/UnControlledAccordion/UnControlledAccordion";
+import {UnControlledRating} from "./Components/UnControlledRating/UnControlledRating";
 
 
 function App() {
@@ -13,15 +15,18 @@ function App() {
     return (
         <div className={'App'}>
             <PageTitle title={'This is APP Component'}/>
-            <OnOff on={true}/>
-            <Accordion title={'Menu'} collapsed={false}/>
-            <Accordion title={'Friends'} collapsed={true}/>
+            <OnOff/>
+            {/*<Accordion title={'Menu'} collapsed={false}/>
+            <Accordion title={'Friends'} collapsed={true}/>*/}
+            <UnControlledAccordion title={'Menu'}/>
+            <Accordion title={'Friends'} collapsed={false}/>
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
+            <UnControlledRating/>
         </div>
 
     );
