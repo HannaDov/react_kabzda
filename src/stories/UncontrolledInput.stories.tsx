@@ -46,3 +46,27 @@ export const ControlInput: ComponentStory<typeof UncontrolledInput> = () =>{
       </>
 
   )}
+
+export const ControlCheckBox: ComponentStory<typeof UncontrolledInput> = () =>{
+  const [parentValue, setParentValue]=useState<boolean>(true)
+  const callback=(e:ChangeEvent<HTMLInputElement>)=>{
+    setParentValue(e.currentTarget.checked)
+  }
+  return (
+        <input type="checkbox" checked={parentValue} onChange={callback}/>
+
+  )}
+export const ControlSelect: ComponentStory<typeof UncontrolledInput> = () =>{
+ const [parentValue, setParentValue]=useState<string|undefined>("value3")
+  const callback=(e:ChangeEvent<HTMLSelectElement>)=>{
+    setParentValue(e.currentTarget.value)
+  }
+  return (
+      <select value={parentValue} onChange={callback}>
+        <option>none</option>
+        <option value="value1">Значение 1</option>
+        <option value="value2">Значение 2</option>
+        <option value="value3">Значение 3</option>
+      </select>
+
+  )}
