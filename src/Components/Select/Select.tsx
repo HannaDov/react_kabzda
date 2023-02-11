@@ -31,14 +31,16 @@ export const Select = (props: SelectPropsType) => {
         if (e.key === 'ArrowDown' || e.key === "ArrowUp") {
             for (let i = 0; i < props.items.length; i++) {
                 if (props.items[i].value === hoveredElementValue) {
-                    const pretendentElement= e.key === 'ArrowDown' ? props.items[i + 1] : props.items[i - 1]
+                    const pretendentElement = e.key === 'ArrowDown' ? props.items[i + 1] : props.items[i - 1]
                     if (pretendentElement) {
                         setHoveredElementValue(pretendentElement.value)
                         return
                     }
                 }
-            } if (!selectItem ){
-                props.onChange(props.items[0].value)}
+            }
+            if (!selectItem) {
+                props.onChange(props.items[0].value)
+            }
 
         }
         if (e.key === "Enter" || e.key === "Escape") {
