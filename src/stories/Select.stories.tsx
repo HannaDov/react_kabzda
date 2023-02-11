@@ -17,7 +17,7 @@ export default {
 const callback=action('select mode change event fired')
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 export const SelectWithValue: ComponentStory<typeof Select> = () => {
-    const [value, setValue]=useState('2')
+    const [value, setValue]=useState('3')
     return (<Select items={[{value:'1', title:'Minsk'}, {value:'2', title:'Warszawa'},
     {value:'3', title:'Vilnus'}]} onChange={setValue} value={value}/>)}
 
