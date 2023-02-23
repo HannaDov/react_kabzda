@@ -10,7 +10,18 @@ component:Clock
 }as ComponentMeta<typeof Clock>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Example:ComponentStory<typeof Clock> = () => {
+export const BaseAnalogClockExample:ComponentStory<typeof Clock> = () => {
+    console.log("BaseAnalogClockExample")
+
+    return <Clock mode={'analog'}/>
+}
+export const BaseDigitalClockExample:ComponentStory<typeof Clock> = () => {
+    console.log("BaseDigitalClockExample")
+
+    return <Clock mode={'digital'}/>
+
+}
+/*
 
     console.log('example')
     const clock = () => {
@@ -36,5 +47,6 @@ clock()
         <Clock/>
     )
 }
+*/
 
 
